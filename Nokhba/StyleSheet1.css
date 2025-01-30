@@ -120,3 +120,104 @@
         .aspMenu li ul a:hover {
             background-color: #3B82F6;
         }
+
+
+
+
+
+
+
+.page-title h1{
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin: 0;
+    font-weight: bolder;
+
+}
+
+.page-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 5%;
+
+}
+
+
+.search-bar-outer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar-inner-container input{
+    font-size: 1.1rem;
+}
+
+.search-bar-inner-container {
+    width: 55%;
+    border-radius: 10%/100%;
+    margin-inline: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    padding-inline: 5%;
+    padding-block: 2%;
+}
+
+    .search-bar-inner-container * {
+        color: black;
+    }
+
+input:focus {
+    outline: none;
+}
+
+.job-name-search {
+    height: 2rem;
+    border: 0px;
+    background-color: inherit;
+    flex: 2;
+}
+
+.pipe {
+    color: gray;
+    margin-inline: 0.1rem;
+    background-color: inherit;
+}
+
+.experience-search {
+    height: 2rem;
+    overflow: clip;
+    border: 0px;
+    scrollbar-width: 0px;
+    flex: 1;
+    background-color: inherit;
+}
+
+    .experience-search::-webkit-scrollbar {
+           display:none;
+    }
+
+.job-location-search {
+    height: 2rem;
+    border: 0px;
+    background-color: inherit;
+    flex: 1;
+}
+
+.job-search-btn {
+    background-color: #00AEEF;
+    color: white;
+    border-radius: 20px;
+    height: 2rem;
+    border: none;
+    padding-inline: 3%;
+}
+
+    .job-search-btn:hover {
+        background-color: #0086C3;
+    }
