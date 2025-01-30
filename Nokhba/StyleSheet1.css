@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #1E3A8A;
+    background-color: #07233b;
     color: white;
     padding: 30px 300px;
 }
@@ -37,17 +37,17 @@
 }
 
 .loginBtn {
-    background-color: #00AEEF;
-    color: #FFFFFF;
-    border: none;
+    background-color: #F0F0F0;
+    color: #a37b3d;
+    border: 1px solid #a37b3d;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
 }
 
 .registerBtn {
-    background-color: #FFFFFF;
-    color: #00AEEF;
+    background-color: #a37b3d;
+    color: #F0F0F0;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -55,13 +55,13 @@
 }
 
     .registerBtn:hover {
-        background-color: #00AEEF;
-        color: #FFFFFF;
+        background-color: #F0F0F0;
+        color: #a37b3d;
     }
 
 .loginBtn:hover {
-    background-color: #FFFFFF;
-    color: #00AEEF;
+    background-color: #a37b3d;
+    color: #F0F0F0;
 }
 
 /* Style for the menu items */
@@ -73,7 +73,7 @@
     gap: 500px;
 }
 
-    .aspMenu li {
+    .aspMenu > ul li {
         position: relative;
         margin-left: 20px;
     }
@@ -89,7 +89,8 @@
     }
 
         .aspMenu a:hover {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid #a37b3d;
+            color: #a37b3d;
         }
 
     /* Style for the dropdown menu */
@@ -98,14 +99,10 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #1E3A8A;
+        background-color: #07233b;
         padding: 0;
         margin: 0;
         list-style-type: none;
-    }
-
-    .aspMenu li:hover ul {
-        display: block;
     }
 
     .aspMenu li ul li {
@@ -118,7 +115,8 @@
     }
 
         .aspMenu li ul a:hover {
-            background-color: #3B82F6;
+            color: #a37b3d;
+            border-bottom: 2px solid #a37b3d;
         }
 
 
@@ -127,12 +125,11 @@
 
 
 
-.page-title h1{
+.page-title h1 {
     font-size: 2.5rem;
-    color: #1E3A8A;
+    color: #a37b3d;
     margin: 0;
     font-weight: bolder;
-
 }
 
 .page-title {
@@ -166,6 +163,7 @@
     background-color: lightgrey;
     padding-inline: 5%;
     padding-block: 2%;
+    box-shadow: 2px 2px 5px gray;
 }
 
     .search-bar-inner-container * {
@@ -187,6 +185,7 @@ input:focus {
     color: gray;
     margin-inline: 0.1rem;
     background-color: inherit;
+    border: 0px;
 }
 
 .experience-search {
@@ -210,14 +209,58 @@ input:focus {
 }
 
 .job-search-btn {
-    background-color: #00AEEF;
+    background-color: #a37b3d;
     color: white;
     border-radius: 20px;
     height: 2rem;
     border: none;
     padding-inline: 3%;
+    border: 1px solid #a37b3d;
 }
 
     .job-search-btn:hover {
-        background-color: #0086C3;
+        background-color: white;
+        color: #a37b3d;
     }
+
+
+
+
+
+
+
+
+
+.site-footer {
+    background-color: #07233b; /* Dark blue background */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center align text */
+    border-top: 1px solid #e7e7e7; /* Light grey top border */
+    color: white; /* White text color */
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+}
+
+    .site-footer a {
+        color: #F0F0F0; 
+        margin: 0 10px; /* Margin between links */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+        .site-footer a:hover {
+            text-decoration: underline; /* Underline links on hover */
+            color: #a37b3d;
+        }
+
+    .site-footer hr {
+        margin: 20px 0; /* Margin above and below the horizontal line */
+        border: 0; /* Remove default border */
+        border-top: 1px solid #e7e7e7; /* Light grey top border */
+    }
+
+    .site-footer p {
+        margin: 10px 0 0; /* Margin above the paragraph */
+        color: #F0F0F0; /* Light grey color for text */
+    }
+
