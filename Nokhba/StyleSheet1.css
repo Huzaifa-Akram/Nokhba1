@@ -231,15 +231,15 @@ input:focus {
 
 
 
-.site-footer {
-    background-color: #07233b; /* Dark blue background */
-    padding: 20px; /* Padding around the footer */
-    text-align: center; /* Center align text */
-    border-top: 1px solid #e7e7e7; /* Light grey top border */
-    color: white; /* White text color */
-    position: fixed; /* Fix the footer at the bottom */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
+.site-footer {  
+   background-color: #07233b; /* Dark blue background */  
+   padding: 20px; /* Padding around the footer */  
+   text-align: center; /* Center align text */  
+   border-top: 1px solid #e7e7e7; /* Light grey top border */  
+   color: white; /* White text color */  
+   position: relative; /* Relative position to place at bottom of page */  
+   bottom: 0; /* Align to the bottom */  
+   width: 100%; /* Full width */  
 }
 
     .site-footer a {
