@@ -37,6 +37,16 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
+        <div class="site-footer">
+            <a href="~/Home.aspx">Home</a>
+            <a href="~/Jobs.aspx">Jobs</a>
+            <a href="~/EmployeePortal.aspx">Employee Portal</a>
+            <a href="~/OrganizationPortal.aspx">Organization Portal</a>
+            <a href="~/AdminPortal.aspx">Admin Portal</a>
+            <hr />
+            <p>&copy; 2023 Nokhba. All rights reserved.</p>
+        </div>
     </form>
 </body>
 </html>
