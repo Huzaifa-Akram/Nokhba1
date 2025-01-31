@@ -25,10 +25,10 @@
         margin: 0;
     }
 
-    .navbar a {
-        color: white;
-        text-decoration: none;
-    }
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
 
 .buttons-container {
     display: flex;
@@ -139,7 +139,6 @@
     align-items: center;
     flex-direction: column;
     padding-block: 5%;
-
 }
 
 
@@ -149,7 +148,8 @@
     justify-content: center;
     align-items: center;
 }
-.search-bar-inner-container input{
+
+.search-bar-inner-container input {
     font-size: 1.1rem;
 }
 
@@ -198,7 +198,7 @@ input:focus {
 }
 
     .experience-search::-webkit-scrollbar {
-           display:none;
+        display: none;
     }
 
 .job-location-search {
@@ -218,6 +218,41 @@ input:focus {
     border: 1px solid #a37b3d;
 }
 
+.job-search-btn:hover {
+    background-color: #0086C3;
+}
+
+
+.job-types-outer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block: 5rem;
+}
+
+.job-types-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.job-type {
+    background-color: #FAF9F6;
+    padding-inline:2%;
+    padding-block:2%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.job-type:hover{
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.1);
+}
     .job-search-btn:hover {
         background-color: white;
         color: #a37b3d;
@@ -231,15 +266,26 @@ input:focus {
 
 
 
-.site-footer {  
-   background-color: #07233b; /* Dark blue background */  
-   padding: 20px; /* Padding around the footer */  
-   text-align: center; /* Center align text */  
-   border-top: 1px solid #e7e7e7; /* Light grey top border */  
-   color: white; /* White text color */  
-   position: relative; /* Relative position to place at bottom of page */  
-   bottom: 0; /* Align to the bottom */  
-   width: 100%; /* Full width */  
+<<<<<<< HEAD
+.site-footer {
+    background-color: #07233b; /* Dark blue background */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center align text */
+    border-top: 1px solid #e7e7e7; /* Light grey top border */
+    color: white; /* White text color */
+    position: relative; /* Relative position to place at bottom of page */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+}
+.site-footer {
+    background-color: #07233b; /* Dark blue background */
+    padding-block: 20px; /* Padding around the footer */
+    text-align: center; /* Center align text */
+    border-top: 1px solid #e7e7e7; /* Light grey top border */
+    color: white; /* White text color */
+    /*position: fixed;*/ /* Fix the footer at the bottom */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
 }
 
     .site-footer a {
