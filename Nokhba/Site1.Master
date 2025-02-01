@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <html>
 <head runat="server">
     <title></title>
@@ -29,7 +31,7 @@
 
             <div class="buttons-container">
                 <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="loginBtn" />
-                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="registerBtn" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="registerBtn" OnClick="onRegisterBtnClick" />
             </div>
  
         </div>

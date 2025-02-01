@@ -9,6 +9,10 @@ namespace Nokhba
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        protected void onRegisterBtnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Registration.aspx");
+        }
 
     }
 }
