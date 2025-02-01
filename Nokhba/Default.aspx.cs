@@ -15,7 +15,9 @@ namespace Nokhba
             if (!IsPostBack)
             {
                 Fill_Experience_DropDown();
+                DatabaseHelper.TestConnection();
             }
+
 
         }
         protected void Fill_Experience_DropDown()
