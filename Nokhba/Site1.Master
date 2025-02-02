@@ -4,6 +4,7 @@
 
 <html>
 <head runat="server">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -14,7 +15,7 @@
         <div class="navbar" >
             <div class="nav-left">
                 <h1>Nokhba</h1>
-                    <asp:Menu ID="menu" runat="server" CssClass="aspMenu" Orientation="Horizontal" StaticDisplayLevels="1" >
+                <asp:Menu ID="menu" runat="server" CssClass="aspMenu" Orientation="Horizontal" StaticDisplayLevels="1" >
                         <Items>
                             <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"/>
                             <asp:MenuItem Text="Jobs" NavigateUrl="~/Jobs.aspx" />
@@ -24,7 +25,7 @@
                                 <asp:MenuItem Text="Admin Portal" NavigateUrl="~/AdminPortal.aspx" />
                             </asp:MenuItem>
                        </Items>
-            </asp:Menu>
+                </asp:Menu>
             </div>
 
             <div class="buttons-container">
