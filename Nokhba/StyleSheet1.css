@@ -25,10 +25,11 @@
         margin: 0;
     }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
 
 .buttons-container {
     display: flex;
@@ -73,37 +74,36 @@
     gap: 500px;
 }
 
-    .aspMenu > ul li {
-        position: relative;
-        margin-left: 20px;
+.navbar .level1 {
+    display: flex;
+    gap: 20px;
+}
+
+.aspMenu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+    .aspMenu a:hover {
+        border-bottom: 2px solid #a37b3d;
+        color: #a37b3d;
     }
 
-
-    .aspMenu a {
-        display: block;
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        transition: background-color 0.3s, border-bottom 0.3s;
-        border-bottom: 2px solid transparent;
-    }
-
-        .aspMenu a:hover {
-            border-bottom: 2px solid #a37b3d;
-            color: #a37b3d;
-        }
-
-    /* Style for the dropdown menu */
-    .aspMenu li ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #07233b;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-    }
+/* Style for the dropdown menu */
+.aspMenu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #07233b;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
 
     .aspMenu li ul li {
         width: 200px;
@@ -119,17 +119,58 @@
             border-bottom: 2px solid #a37b3d;
         }
 
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 20px 10px;
+    }
 
+        .navbar h1 {
+            font-size: 1.2rem;
+        }
 
+        .navbar a {
+            font-size: 0.7rem;
+        }
+        .nav-left{
+            gap: 0;
+        }
 
+    .buttons-container {
+        gap: 10px;
+    }
 
+    .loginBtn, .registerBtn {
+        padding: 5px 5px;
+        font-size: 0.6rem;
+        width: 50px;
+    }
 
+    .navbar .level1{
+        gap: 5px;
+    }
+
+    .navbar .level2 li{
+        width: 120px;
+    }
+        
+}
+ @media screen and (max-width: 400px){
+    .navbar {
+        justify-content: flex-start;
+    }
+     .buttons-container{
+         flex-direction: column;
+     }
+ }
 
 .page-title h1 {
     font-size: 2.5rem;
     color: #a37b3d;
     margin: 0;
     font-weight: bolder;
+}
+.page-title p {
+    font-size: 1.2rem;
 }
 
 .page-title {
@@ -140,7 +181,6 @@
     flex-direction: column;
     padding-block: 5%;
 }
-
 
 .search-bar-outer-container {
     width: 100%;
@@ -192,14 +232,15 @@ input:focus {
     height: 2rem;
     overflow: clip;
     border: 0px;
-    scrollbar-width: 0px;
+    scrollbar-width: none;
     flex: 1;
     background-color: inherit;
-}
 
-    .experience-search::-webkit-scrollbar {
-        display: none;
+}
+    .experience-search option {
+        width: 10px
     }
+
 
 .job-location-search {
     height: 2rem;
@@ -218,10 +259,9 @@ input:focus {
     border: 1px solid #a37b3d;
 }
 
-.job-search-btn:hover {
-    background-color: #0086C3;
-}
-
+    .job-search-btn:hover {
+        background-color: #0086C3;
+    }
 
 .job-types-outer-container {
     width: 100%;
@@ -229,6 +269,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     gap: 1rem;
     margin-block: 4rem;
 }
@@ -236,6 +277,7 @@ input:focus {
 .job-types-inner-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -243,70 +285,116 @@ input:focus {
 
 .job-type {
     background-color: #FAF9F6;
-    padding-inline:1%;
-    padding-block:1%;
-    border: 1px solid rgba(0,0,0,0.2);
+    padding-inline: 1%;
+    padding-block: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     cursor: pointer;
 }
 
-.job-type:hover{
-    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.1);
-}
-    .job-search-btn:hover {
-        background-color: white;
-        color: #a37b3d;
+    .job-type:hover {
+        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
     }
 
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-.site-footer {
-    background-color: #07233b; /* Dark blue background */
-    padding: 20px; /* Padding around the footer */
-    text-align: center; /* Center align text */
-    border-top: 1px solid #e7e7e7; /* Light grey top border */
-    color: white; /* White text color */
-    position: relative; /* Relative position to place at bottom of page */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
+.job-search-btn:hover {
+    background-color: white;
+    color: #a37b3d;
 }
+
+@media screen and (max-width: 1000px) {
+    .page-title{
+        align-items: flex-start;
+        padding-inline: 5%;
+    }
+    .page-title h1 {
+        font-size: 1.3rem; /* Reduce the font size of the page title */
+    }
+    .page-title p{
+        font-size: 0.9rem;
+    }
+
+    .search-bar-inner-container {
+        width: 90%; /* Adjust the width of the search bar container */
+        padding-inline: 2%; /* Adjust padding */
+    }
+
+    .job-name-search, .experience-search, .job-location-search {
+        font-size: 0.9rem; /* Adjust font size for inputs */
+    }
+
+    .pipe {
+        display: none; /* Hide the pipe element on small screens */
+    }
+
+    .search-bar-inner-container {
+        flex-direction: column; /* Stack the search bar elements vertically */
+        gap: 10px; /* Add some space between elements */
+        border-radius: 5px; 
+    }
+
+    .job-name-search, .experience-search, .job-location-search, .job-search-btn {
+        width: 100%; /* Make inputs and button full width */
+    }
+
+    .job-search-btn {
+        padding-inline: 5%; /* Adjust padding for the search button */
+    }
+    .job-types-inner-container .job-type {
+        font-size: 0.8rem;
+    }
+    .job-types-outer-container{
+        margin-top: 2rem;
+        padding-inline: 5%;
+    }
+    .job-types-inner-container {
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+}
+
 .site-footer {
-    background-color: #07233b; /* Dark blue background */
-    padding-block: 20px; /* Padding around the footer */
-    text-align: center; /* Center align text */
-    border-top: 1px solid #e7e7e7; /* Light grey top border */
-    color: white; /* White text color */
-    /*position: fixed;*/ /* Fix the footer at the bottom */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
+    background-color: #07233b;
+    padding: 5% 5% ;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    color: white;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
 }
 
     .site-footer a {
-        color: #F0F0F0; 
-        margin: 0 10px; /* Margin between links */
-        text-decoration: none; /* Remove underline from links */
+        color: #F0F0F0;
+        margin: 0 10px;
+        text-decoration: none;
     }
 
         .site-footer a:hover {
-            text-decoration: underline; /* Underline links on hover */
+            text-decoration: underline;
             color: #a37b3d;
         }
 
     .site-footer hr {
-        margin: 20px 0; /* Margin above and below the horizontal line */
-        border: 0; /* Remove default border */
-        border-top: 1px solid #e7e7e7; /* Light grey top border */
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #e7e7e7;
     }
 
     .site-footer p {
-        margin: 10px 0 0; /* Margin above the paragraph */
-        color: #F0F0F0; /* Light grey color for text */
+        margin: 10px 0 0;
+        color: #F0F0F0;
     }
 
+    @media screen and (max-width: 800px) {
+        .site-footer {
+            padding: 10px 0;
+            
+        }
+
+        .site-footer p {
+            font-size: 0.6rem;
+        }
+        .site-footer a {
+            font-size: 0.6rem;
+        }
+    }

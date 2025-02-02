@@ -1,0 +1,48 @@
+﻿.main-page{
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-div {
+    width: 70%;
+    padding: 2%;
+    border: 2px solid grey;
+    border-radius: 1.5rem;
+    box-shadow: 0px 6px 25px rgba(30,10,58,0.1);
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner-div .registration-header {
+    color: #A37B3D;
+    font-size: 3rem;
+    padding-block: 1%;
+}
+
+.inner-div label {
+    font-size: 1rem;
+    text-align: start;
+    width: 26%;
+/*    border: 1px solid black;*/
+}
+
+.inner-div input[type=text], .inner-div select {
+    height: 2.5rem;
+    padding-inline: 1%;
+    width: 25%;
+    margin-bottom: 3%;
+    border-radius: 0.8rem;
+    border: none;
+}
+
+.inner-div input[type=submit] {
+    padding: 1%;
+    background-color: #07233B;
+    color: white;
+    border-radius: 0.8rem;
+}

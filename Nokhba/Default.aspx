@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="page-title">
         <h1>Want To Find The Best Jobs?</h1>
-        <p style="font-size: 1.2rem;">You're at the right place</p>
+        <p>You're at the right place</p>
     </div>
     <div class="search-bar-outer-container">
         <div class="search-bar-inner-container">

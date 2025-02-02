@@ -2,9 +2,11 @@
 
 <!DOCTYPE html>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <html>
 <head runat="server">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -12,28 +14,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="navbar" >
+        <div class="navbar">
             <div class="nav-left">
                 <h1>Nokhba</h1>
-                <asp:Menu ID="menu" runat="server" CssClass="aspMenu" Orientation="Horizontal" StaticDisplayLevels="1" >
-                        <Items>
-                            <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"/>
-                            <asp:MenuItem Text="Jobs" NavigateUrl="~/Jobs.aspx" />
-                            <asp:MenuItem Text="Portal">
+                <asp:Menu ID="menu" runat="server" CssClass="aspMenu" Orientation="Horizontal" StaticDisplayLevels="1">
+                    <Items>
+                        <asp:MenuItem Text="Home" NavigateUrl="~/Home.aspx"/>
+                        <asp:MenuItem Text="Jobs" NavigateUrl="~/Jobs.aspx" />
+                        <asp:MenuItem Text="Portal">
                             <asp:MenuItem Text="Employee Portal" NavigateUrl="~/EmployeePortal.aspx" />
-                                <asp:MenuItem Text="Organization Portal" NavigateUrl="~/OrganizationPortal.aspx" />
-                                <asp:MenuItem Text="Admin Portal" NavigateUrl="~/AdminPortal.aspx" />
-                            </asp:MenuItem>
-                       </Items>
+                            <asp:MenuItem Text="Organization Portal" NavigateUrl="~/OrganizationPortal.aspx" />
+                        </asp:MenuItem>
+                    </Items>
                 </asp:Menu>
             </div>
 
             <div class="buttons-container">
                 <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="loginBtn" />
-                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="registerBtn" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="registerBtn" OnClick="onRegisterBtnClick" />
+
             </div>
- 
         </div>
+        
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
@@ -49,5 +51,6 @@
             <p>&copy; 2023 Nokhba. All rights reserved.</p>
         </div>
     </form>
+
 </body>
 </html>
