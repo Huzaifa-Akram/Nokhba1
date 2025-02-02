@@ -14,13 +14,13 @@
         <div class="inner-div">
             <h1 class="registration-header">Registration</h1>
             <label>Fullname</label>
-            <input runat="server" id="fullname" placeholder="Fullname" />
+            <input runat="server" id="fullname" placeholder="John Doe" />
             <label>Email</label>
-            <input runat="server" id="email" placeholder="Email" />
+            <input runat="server" id="email" placeholder="johndoe@gmail.com" />
             <label>Password</label>
-            <input runat="server" id="password" placeholder="Password" />
+            <input runat="server" id="password" placeholder="********" />
             <label>Confirm Password</label>
-            <input runat="server" id="confirmPassword" placeholder="Password" />
+            <input runat="server" id="confirmPassword" placeholder="********" />
             <label>Role</label>
             <asp:DropDownList ID="UserRoleDropDownList" runat="server"></asp:DropDownList>
             <asp:Button runat="server" Text="Register" />
