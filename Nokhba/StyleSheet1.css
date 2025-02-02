@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -105,19 +106,35 @@
     list-style-type: none;
 }
 
-    .aspMenu li ul li {
-        width: 200px;
-    }
+.aspMenu li ul li {
+    width: 200px;
+}
 
-    .aspMenu li ul a {
-        padding: 10px;
-        white-space: nowrap;
-    }
+.aspMenu li ul a {
+    padding: 10px;
+    white-space: nowrap;
+}
 
         .aspMenu li ul a:hover {
             color: #a37b3d;
             border-bottom: 2px solid #a37b3d;
         }
+
+
+.job-types-outer-container{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.job-types-inner-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 800px) {
     .navbar {
@@ -304,7 +321,11 @@ input:focus {
 @media screen and (max-width: 1000px) {
     .page-title{
         align-items: flex-start;
-        padding-inline: 5%;
+/*        padding-inline: 5%;*/
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
     .page-title h1 {
         font-size: 1.3rem; /* Reduce the font size of the page title */
@@ -315,7 +336,7 @@ input:focus {
 
     .search-bar-inner-container {
         width: 90%; /* Adjust the width of the search bar container */
-        padding-inline: 2%; /* Adjust padding */
+        /*padding-inline: 2%;*/ /* Adjust padding */
     }
 
     .job-name-search, .experience-search, .job-location-search {
@@ -344,17 +365,18 @@ input:focus {
     }
     .job-types-outer-container{
         margin-top: 2rem;
-        padding-inline: 5%;
     }
     .job-types-inner-container {
-        justify-content: flex-start;
+        justify-content: center;
         gap: 0.5rem;
+        flex-wrap: wrap;
+        max-width: 100%;
     }
 }
 
 .site-footer {
     background-color: #07233b;
-    padding: 5% 5% ;
+    padding-block: 5%;
     text-align: center;
     border-top: 1px solid #e7e7e7;
     color: white;
