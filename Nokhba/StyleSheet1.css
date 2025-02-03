@@ -7,10 +7,16 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #F0F0F0;
 }
 
-.main-content{
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
     flex: 1;
 }
 
@@ -24,22 +30,22 @@
     padding: 30px 40px;
 }
 
-    .navbar .nav-left {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
+.navbar .nav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
 
-    .navbar h1 {
-        margin: 0;
-    }
+.navbar h1 {
+    margin: 0;
+}
 
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        font-size: 0.9rem;
-    }
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
 
 .buttons-container {
     display: flex;
@@ -65,10 +71,10 @@
     cursor: pointer;
 }
 
-    .registerBtn:hover {
-        background-color: #F0F0F0;
-        color: #a37b3d;
-    }
+.registerBtn:hover {
+    background-color: #F0F0F0;
+    color: #a37b3d;
+}
 
 .loginBtn:hover {
     background-color: #a37b3d;
@@ -98,10 +104,10 @@
     border-bottom: 2px solid transparent;
 }
 
-    .aspMenu a:hover {
-        border-bottom: 2px solid #a37b3d;
-        color: #a37b3d;
-    }
+.aspMenu a:hover {
+    border-bottom: 2px solid #a37b3d;
+    color: #a37b3d;
+}
 
 /* Style for the dropdown menu */
 .aspMenu li ul {
@@ -124,17 +130,17 @@
     white-space: nowrap;
 }
 
-        .aspMenu li ul a:hover {
-            color: #a37b3d;
-            border-bottom: 2px solid #a37b3d;
-        }
+.aspMenu li ul a:hover {
+    color: #a37b3d;
+    border-bottom: 2px solid #a37b3d;
+}
 
 
-.job-types-outer-container{
+.job-types-outer-container {
     padding: 0px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 .job-types-inner-container {
@@ -150,16 +156,17 @@
         padding: 20px 10px;
     }
 
-        .navbar h1 {
-            font-size: 1.2rem;
-        }
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
 
-        .navbar a {
-            font-size: 0.7rem;
-        }
-        .nav-left{
-            gap: 0;
-        }
+    .navbar a {
+        font-size: 0.7rem;
+    }
+
+    .nav-left {
+        gap: 0;
+    }
 
     .buttons-container {
         gap: 10px;
@@ -171,23 +178,24 @@
         width: 50px;
     }
 
-    .navbar .level1{
+    .navbar .level1 {
         gap: 5px;
     }
 
-    .navbar .level2 li{
+    .navbar .level2 li {
         width: 120px;
     }
-        
 }
- @media screen and (max-width: 400px){
+
+@media screen and (max-width: 400px) {
     .navbar {
         justify-content: flex-start;
     }
-     .buttons-container{
-         flex-direction: column;
-     }
- }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+}
 
 .page-title h1 {
     font-size: 2.5rem;
@@ -195,6 +203,7 @@
     margin: 0;
     font-weight: bolder;
 }
+
 .page-title p {
     font-size: 1.2rem;
 }
@@ -232,9 +241,9 @@
     box-shadow: 2px 2px 5px gray;
 }
 
-    .search-bar-inner-container * {
-        color: black;
-    }
+.search-bar-inner-container * {
+    color: black;
+}
 
 input:focus {
     outline: none;
@@ -261,11 +270,11 @@ input:focus {
     scrollbar-width: none;
     flex: 1;
     background-color: inherit;
-
 }
-    .experience-search option {
-        width: 10px
-    }
+
+.experience-search option {
+    width: 10px
+}
 
 
 .job-location-search {
@@ -285,9 +294,9 @@ input:focus {
     border: 1px solid #a37b3d;
 }
 
-    .job-search-btn:hover {
-        background-color: #0086C3;
-    }
+.job-search-btn:hover {
+    background-color: #0086C3;
+}
 
 .job-types-outer-container {
     width: 100%;
@@ -295,7 +304,6 @@ input:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     gap: 1rem;
     margin-block: 4rem;
 }
@@ -318,9 +326,9 @@ input:focus {
     cursor: pointer;
 }
 
-    .job-type:hover {
-        box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
-    }
+.job-type:hover {
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+}
 
 .job-search-btn:hover {
     background-color: white;
@@ -328,53 +336,56 @@ input:focus {
 }
 
 @media screen and (max-width: 1000px) {
-    .page-title{
+    .page-title {
         align-items: flex-start;
-/*        padding-inline: 5%;*/
-        width:100%;
-        display:flex;
+        width: 100%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .page-title h1 {
-        font-size: 1.3rem; /* Reduce the font size of the page title */
+        font-size: 1.3rem; 
     }
-    .page-title p{
+
+    .page-title p {
         font-size: 0.9rem;
     }
 
     .search-bar-inner-container {
-        width: 90%; /* Adjust the width of the search bar container */
-        /*padding-inline: 2%;*/ /* Adjust padding */
+        width: 90%; 
     }
 
     .job-name-search, .experience-search, .job-location-search {
-        font-size: 0.9rem; /* Adjust font size for inputs */
+        font-size: 0.9rem; 
     }
 
     .pipe {
-        display: none; /* Hide the pipe element on small screens */
+        display: none; 
     }
 
     .search-bar-inner-container {
-        flex-direction: column; /* Stack the search bar elements vertically */
-        gap: 10px; /* Add some space between elements */
-        border-radius: 5px; 
+        flex-direction: column; 
+        gap: 10px; 
+        border-radius: 5px;
     }
 
     .job-name-search, .experience-search, .job-location-search, .job-search-btn {
-        width: 100%; /* Make inputs and button full width */
+        width: 100%; 
     }
 
     .job-search-btn {
-        padding-inline: 5%; /* Adjust padding for the search button */
+        padding-inline: 5%; 
     }
+
     .job-types-inner-container .job-type {
         font-size: 0.8rem;
     }
-    .job-types-outer-container{
+
+    .job-types-outer-container {
         margin-top: 2rem;
     }
+
     .job-types-inner-container {
         justify-content: center;
         gap: 0.5rem;
@@ -385,47 +396,45 @@ input:focus {
 
 .site-footer {
     background-color: #07233b;
-    padding-block: 5%;
+    padding-block: 3%;
     text-align: center;
     border-top: 1px solid #e7e7e7;
     color: white;
-    position: absolute;
-    bottom: 0px;
     width: 100%;
 }
 
-    .site-footer a {
-        color: #F0F0F0;
-        margin: 0 10px;
-        text-decoration: none;
-    }
+.site-footer a {
+    color: #F0F0F0;
+    margin: 0 10px;
+    text-decoration: none;
+}
 
-        .site-footer a:hover {
-            text-decoration: underline;
-            color: #a37b3d;
-        }
+.site-footer a:hover {
+    text-decoration: underline;
+    color: #a37b3d;
+}
 
-    .site-footer hr {
-        margin: 20px 0;
-        border: 0;
-        border-top: 1px solid #e7e7e7;
+.site-footer hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e7e7e7;
+}
+
+.site-footer p {
+    margin: 10px 0 0;
+    color: #F0F0F0;
+}
+
+@media screen and (max-width: 800px) {
+    .site-footer {
+        padding: 30px 0;
     }
 
     .site-footer p {
-        margin: 10px 0 0;
-        color: #F0F0F0;
+        font-size: 0.6rem;
     }
 
-    @media screen and (max-width: 800px) {
-        .site-footer {
-            padding: 10px 0;
-            
-        }
-
-        .site-footer p {
-            font-size: 0.6rem;
-        }
-        .site-footer a {
-            font-size: 0.6rem;
-        }
+    .site-footer a {
+        font-size: 0.6rem;
     }
+}
