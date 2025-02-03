@@ -11,7 +11,7 @@ namespace Nokhba
 {
 
 
-    public partial class Default
+    public partial class JobSearch
     {
 
         /// <summary>
@@ -40,5 +40,14 @@ namespace Nokhba
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox JobLocationInput;
+
+        /// <summary>
+        /// JobsList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList JobsList;
     }
 }

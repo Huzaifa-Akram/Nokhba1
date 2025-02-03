@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -42,5 +43,17 @@ namespace Nokhba
             experienceDropDown.DataValueField = "Years";
             experienceDropDown.DataBind();
         }
-}
+
+        protected void OnSearchBtnClick(object sender, EventArgs e)
+        {
+            string name = JobNameSearchInput.Text;
+            string experience = experienceDropDown.SelectedValue;
+            string location = JobLocationInput.Text;
+
+            string link = GetRouteUrl("JobSearchRoute", new { name, experience, location });
+
+            Response.Redirect(link);
+        }
+
+    }
 }

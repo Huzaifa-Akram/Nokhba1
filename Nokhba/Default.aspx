@@ -11,12 +11,12 @@
     </div>
     <div class="search-bar-outer-container">
         <div class="search-bar-inner-container">
-            <input type="text" class="job-name-search" placeholder="Enter Job Title" />
+            <asp:TextBox runat="server" ID="JobNameSearchInput" CssClass="job-name-search" placeholder="Enter Job Title" ></asp:TextBox>
             <div class="pipe">|</div>
             <asp:DropDownList CssClass="experience-search" ID="experienceDropDown" runat="server" EnableViewState="true"></asp:DropDownList>
             <div class="pipe">|</div>
-            <input type="text" class="job-location-search" placeholder="Enter a City" />
-            <asp:Button runat="server" Text="Search" CssClass="job-search-btn" />
+            <asp:TextBox runat="server" ID="JobLocationInput" CssClass="job-name-search" placeholder="Enter a City" ></asp:TextBox>
+            <asp:Button runat="server" Text="Search" CssClass="job-search-btn" OnClick="OnSearchBtnClick" />
         </div>
     </div>
 

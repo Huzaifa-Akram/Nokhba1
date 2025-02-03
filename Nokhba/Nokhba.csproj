@@ -119,6 +119,8 @@
     <Content Include="images\menu.svg" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="JobSearch.aspx" />
+    <Content Include="JobSearch.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Registration.aspx" />
@@ -137,6 +139,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JobSearch.aspx.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobSearch.aspx.designer.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
