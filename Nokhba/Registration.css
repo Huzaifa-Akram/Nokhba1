@@ -71,7 +71,11 @@
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 435px){
+    .inner-div .registration-header {
+        font-size: 2rem;
+    }
+
     .inner-div {
         width: 100%;
         margin-block: 10%;
@@ -79,5 +83,10 @@
 
     .inner-div input[type=text], .inner-div select {
         width: 70%;
+        font-size: 0.9rem;
     }
+    .inner-div label{
+        font-size: 0.9rem;
+    }
+
 }

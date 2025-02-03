@@ -7,16 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Nokhba
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class Login : System.Web.UI.Page
     {
-        protected void onRegisterBtnClick(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("~/Registration.aspx");
+
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Login.aspx");
+
         }
     }
 }
