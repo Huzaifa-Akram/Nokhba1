@@ -45,9 +45,9 @@ namespace Nokhba
 
         protected void OnSearchBtnClick(object sender, EventArgs e)
         {
-            string name = JobNameSearchInput.Text;
-            string experience = experienceDropDown.SelectedValue;
-            string location = JobLocationInput.Text;
+            string name = JobNameSearchInput.Text ?? "";
+            string experience = experienceDropDown.SelectedValue ?? "";
+            string location = JobLocationInput.Text ?? "";
 
             string link = GetRouteUrl("JobSearchRoute", new { name, experience, location });
 

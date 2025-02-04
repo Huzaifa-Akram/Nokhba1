@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -12,25 +14,29 @@ namespace Nokhba
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string name = "";
+            string experience = "0";
+            string location = "";
+
             if (!IsPostBack)
             {
                 Fill_Experience_DropDown();
 
                 Page.RouteData.Values.TryGetValue("name", out object nameObj);
-                string name = nameObj?.ToString() ?? "";
+                name = nameObj?.ToString() ?? "";
 
                 Page.RouteData.Values.TryGetValue("experience", out object experienceObj);
-                string experience = experienceObj?.ToString() ?? "0"; //Setting Default Experience To `0`
+                experience = experienceObj?.ToString() ?? "0"; //Setting Default Experience To `0`
 
                 Page.RouteData.Values.TryGetValue("location", out object locationObj);
-                string location = locationObj?.ToString() ?? "";
-
+                location = locationObj?.ToString() ?? "";
 
                 JobNameSearchInput.Text = name;
                 experienceDropDown.SelectedValue = experience;
                 JobLocationInput.Text = location;
+                GetJobs(name, int.Parse(experience));
             }
-            FillJobsList();
+            //FillJobsList();
 
 
 
@@ -90,16 +96,75 @@ namespace Nokhba
         }
 
 
-        protected void FillJobsList()
-        {
-            List<object> jobs = new List<object>();
-            for (int i = 0; i < 10; i++)
-            {
-                jobs.Add(new { id = i, employer = $"Employer#{i}", title = $"Title#{i}", category = $"Category#{i}", experience = $"{i}", salary = $"{i}00", description = $"Desciption#{i}", date = $"Date#{i}" });
-            }
+        //protected void FillJobsList()
+        //{
+        //    List<object> jobs = new List<object>();
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        if(i % 2 == 0)
+        //        {
+        //            jobs.Add(new { id = i, employer = $"Employer#{i}", title = $"Title#{i}", category = $"Category#{i}", experience = $"{i}", salary = $"{i}00", description = $"Desciption# lm  ml m lm l ml ml m l m lm lm lm l ml m lm lm l ml m lm l m lm l m lm lm lm lm lm  lm ml {i}", date = $"Date#{i}" });
+        //        }
+        //        else
+        //        {
+        //            jobs.Add(new { id = i, employer = $"Employer#{i}", title = $"Title#{i}", category = $"Category#{i}", experience = $"{i}", salary = $"{i}00", description = $"Desciption# lm  ml m lm l ml ml m l m lm lm lm l ml m lm lm l ml m lm l m lm l m lm lm lm lm lm  lm ml {i} Desciption# lm  ml m lm l ml ml m l m lm lm lm l ml m lm lm l ml m lm l m lm l m lm lm lm lm lm  lm ml {i} Desciption# lm  ml m lm l ml ml m l m lm lm lm l ml m lm lm l ml m lm l m lm l m lm lm lm lm lm  lm ml {i}", date = $"Date#{i}" });
+        //        }
 
-            JobsList.DataSource = jobs;
-            JobsList.DataBind();
+        //    }
+
+        //    JobsList.DataSource = jobs;
+        //    JobsList.DataBind();
+        //}
+
+
+        private void GetJobs(string title, int experience)
+        {
+            string connString = ConfigurationManager.ConnectionStrings["JobPortalDB"].ConnectionString;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();  // Open the connection
+                    Console.WriteLine("Connection opened successfully.");
+
+                    // SQL query to fetch filtered data from the Jobs table
+                    string query = "SELECT Jobs.*, Users.FullName AS employer FROM Jobs INNER JOIN Users ON Jobs.EmployerID = Users.UserID WHERE Jobs.Title LIKE @Title AND Jobs.ExperienceRequired <= @Experience;";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        // Adding parameters to prevent SQL injection
+                        cmd.Parameters.AddWithValue("@Title", "%" + title + "%");  // Using LIKE for partial matching
+                        cmd.Parameters.AddWithValue("@Experience", experience);
+
+                        // Create a DataTable to store query results
+                        DataTable dataTable = new DataTable();
+
+                        // Use DataAdapter to fill the DataTable
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+
+                        // Check if there are any rows in the DataTable
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            // Bind the DataTable to the DataList control
+                            JobsList.DataSource = dataTable;
+                            JobsList.DataBind();  // Bind data to the DataList control
+                        }
+                        else
+                        {
+                            Console.WriteLine("No jobs found with the specified filters.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
         }
 
 
