@@ -1,0 +1,75 @@
+﻿.verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 100px auto;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #a37b3d;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.verification-container h2 {
+    margin: 0;
+    color: #a37b3d;
+}
+
+.verification-container p {
+    width: 70%;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.verification-container .input-box {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.verification-container .btn-primary {
+    width: 73%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #a37b3d;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #a37b3d;
+}
+
+.verification-container .btn-primary:hover {
+    background-color: #F0F0F0;
+    color: #a37b3d;
+}
+
+.verification-container .resend-text {
+    width: 70%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.verification-container .resend-link {
+    color: #a37b3d;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .verification-container {
+        width: 80%;
+    }
+
+    .verification-container .input-box,
+    .verification-container .btn-primary {
+        width: 100%;
+    }
+}

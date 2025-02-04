@@ -11,15 +11,9 @@ public class DatabaseHelper
 
         using (MySqlConnection conn = new MySqlConnection(connString))
         {
-            try
-            {
                 conn.Open();
                 Debug.WriteLine("✅ Database Connected Successfully!");  // This will show in Visual Studio Output Window
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("❌ Connection Failed: " + ex.Message);
-            }
+            
         }
     }
 }
